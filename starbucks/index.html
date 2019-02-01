@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-	<title>STARBUCKS</title>
+	<title>starbucks</title>
 	<meta charset="utf-8">
-	<meta name="author" content="pixelhint.com">
-	<meta name="description" content="Minima is a minimal, clean HTML5 multi-purpose template, well-coded & commented code"/>
+	<meta name="author" content="tjoeun">
+	<meta name="description" content="starbucks 코리아 홈페이지입니다."/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script src="js/video.js"></script>
 </head>
 <body>
-
 	<header>
-
 		<div class="wrapper">
-			<a href="#" class="logo"> <img src="img/logo_star.png" alt="" title="starbucks"/> </a>
+			<h1 class="logo"><a href="#"><img src="img/logo_star.png" alt="starbucks"/></a></h1>
 			<nav>
 				<ul>
-					<li><a href="#">COFFEE</a></li>
+          <li><a href="#">COFFEE</a></li>
 					<li><a href="#">MENU</a></li>
 					<li><a href="#">STORE</a></li>
 					<li><a href="#">RESPONSIBILITY</a></li>
@@ -28,29 +27,29 @@
 				</ul>
 			</nav>
 		</div>
-
 	</header><!-- End Header -->
 
 	<section class="billboard">
-		<section class="caption">
-			<p class="cap_title">Introducing the Starbucks<br>Rewards™ Visa® Card</p>
-			<p class="cap_desc">Enjoy more of what you love. Earn Stars — that add up to food and drink <br> Rewards — everywhere you make purchases.</p>
+    <h2 class="blind">메인광고</h2>
+		<div class="caption">
+      <p class="cap_title">Introducing the Starbucks Rewards™ Visa® Card</p>
+			<p class="cap_desc">Enjoy more of what you love. Earn Stars — that add up to food and drink Rewards — everywhere you make purchases.</p>
 			<a href="#">LEARN MORE<i></i></a>
-		</section>
+		</div>
 	</section><!-- End billboard -->
 
-
 	<section class="video wrapper">
-		<h2>STARBUCKS RESERVE</h2>
-		<p>세계 최고급 커피 상위 3% 이내의 원두를 찾기 위한 <br>스타벅스의 커피 전문가들의 이야기를 지금 영상으로 확인하세요.</p>
+    <h2>STARBUCKS RESERVE</h2>
+		<p>세계 최고급 커피 상위 3% 이내의 원두를 찾기 위한<br> 스타벅스의 커피 전문가들의 이야기를 지금 영상으로 확인하세요.</p>
 		<div class="ex_video">
-			<video src="source/starbuck_reserve.mp4"></video>
-
-			<div id="control">
-				<button id="btn-play-pause" title="재생"><i class="material-icons">play_arrow</i></button>
-				<button id="btn-replay" title="다시재생"><i class="material-icons">replay</i></button>
-				<button id="btn-volume" title="음소거"><i class="material-icons">volume_up</i></button>
-				<button id="btn-fullscreen" title="전체화면"><i class="material-icons">fullscreen</i></button>
+      <video src="source/starbuck_reserve.mp4">
+				video를 지원하지 않는 브라우저입니다.
+			</video>
+			<div id="player-control">
+				<button id="btn-play-pause" title="재생"><i class="material-icons">play_arrow</i><span class="blind">재생/일시정지</span></button>
+				<button id="btn-replay" title="다시재생"><i class="material-icons">replay</i><span class="blind">다시재생</span></button>
+				<button id="btn-volume" title="음소거"><i class="material-icons">volume_up</i><span class="blind">음소거</span></button>
+				<button id="btn-fullscreen" title="전체화면"><i class="material-icons">fullscreen</i><span class="blind">전체화면</span></button>
 			</div>
 		</div>
 	</section>	<!-- End video -->
