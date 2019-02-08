@@ -186,6 +186,9 @@ $(function(){
 
 
     //로그인폼의 로그인버튼을 눌렀을 때(아이디, 비밀번호값의 여부 체크)
+
+    $('.user-info').hide();
+
     $('.btn-login').click(function(){
       var id=$('#id').val();
       var password=$('#password').val();
