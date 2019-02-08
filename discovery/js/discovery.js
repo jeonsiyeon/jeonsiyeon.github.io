@@ -197,10 +197,23 @@ $(function(){
       }else if(password==''){
         $('#password').after('<p class="message">비밀번호를 입력하세요.</p>').focus();
       }else{
-        $('.login-form').fadeOut(1000);
+        $('.login-form').fadeOut(1000,function(){
+          $('.user-info b').text(id);
+          $('.user-info').show();
+        });
       }
+    })
 
+    //로그아웃하기
+    $('#logout').click(function(){
+      $('.user-info').hide();
       $('input').val('');
+    })
+    $('input').keyup(function(){
+      var lenght=$(this).val().length;
+      if(lenght !=0){
+        $(this).next('.message').remove();
+      }
     })
 
     //모바일 footer

@@ -79,6 +79,16 @@ button{cursor: pointer;}
               width:40px; height:20px; line-height: 20px; cursor: pointer;}
   .lang-nav li:nth-of-type(1){border-right: 1px solid black; box-sizing: border-box;}
 
+  header .user-info{
+    width:15%;
+    position: absolute; right:0; top:135px;
+  }
+  header #logout{
+    background: #fff; width:50px; height:30px;
+    border: 2px solid black;
+  }
+
+
   /*모바일 헤더*/
   header h1.mo-logo{
     display: none; position:absolute; z-index: 1;
