@@ -40,8 +40,7 @@
   .btn-search-mo i{transform: scaleX(-1); }
 
   /*모바일 nav*/
-  .mo-nav{width: 100%; height:540px; position: absolute; z-index: 120;
-    }
+  .mo-nav{width: 100%; height:540px; position: absolute; margin-top: 20px; z-index: 110;}
   .mo-nav .user-nav{width:100%; height:55px;}
   .mo-nav .user-nav li{float: left; width:50%; background:#fff; outline: 1px solid black;}
   .mo-nav .user-nav li a{font-size: 25px; height:50px;
@@ -113,7 +112,7 @@
   .mo-nav #on-off:checked + label .btn{margin-left:62px;}
 
 
-
+  .main-slide .swiper-slide a{ position: relative; z-index: 2;}
   .main-slide .swiper-slide img{width:100%; height:100%;}
 
   /* 신상품&베스트 상품 탭 메뉴*/
@@ -212,8 +211,7 @@
  .mo-footer address{background: #1a355e; color:#fff;
    font-size: 15px; font-style: normal; padding:25px; box-sizing: border-box;}
  .mo-footer address p{margin-bottom: 10px;}
-
-
+ .main-slide .txt{display: none;}
 
 }
 
