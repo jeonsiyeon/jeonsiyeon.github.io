@@ -1,5 +1,25 @@
 $(function(){
 
+  //이벤트
+  $(window).resize(function(){
+    var width=window.innerWidth;
+
+    if(width < 1024){
+      $(document).on("scroll", function() {
+      	if($(document).scrollTop()>100) {
+      		$("header").removeClass("large").addClass("small");
+      	} else {
+      		$("header").removeClass("small").addClass("large");
+      	}
+      })
+    }else{
+
+    }
+  }).resize();
+
+
+
+
   $(".pc-nav .gnb > li").hover(function(){
     $('header').addClass('on');
     $('header').after('<div class="bg"></div>');
@@ -29,7 +49,7 @@ $(function(){
 
   //검색팝업
   $('.search-popup').hide();
-  $('#btn-search').click(function(){
+  $('#btn-search,.btn-search-mo').click(function(){
     $('.search-popup').css('display','block');
   })
   $('.search-popup>button').click(function(){
@@ -56,7 +76,7 @@ $(function(){
       spaceBetween: 30,
       centeredSlides: true,
       autoplay: {
-        delay: 4000,
+        delay: 2000,
         disableOnInteraction: false,
       },
       pagination: {
@@ -76,7 +96,7 @@ $(function(){
   });
 
   //MD choice
-  var swiper = new Swiper('.md-choice .swiper-container', {
+  var swiper2 = new Swiper('.md-choice .swiper-container', {
       slidesPerView: 5,
       spaceBetween: 20,
 
@@ -87,7 +107,7 @@ $(function(){
         },
         768: {
           slidesPerView: 2,
-          spaceBetween: 0,
+          spaceBetween: -20,
         }
       },
       navigation: {
@@ -96,14 +116,11 @@ $(function(){
       },
     });
 
-    //back to top이동
-    $('.sns>a').click(function(){
-      $('html').animate({scrollTop:0},600);
-    });
+
 
     //탭메뉴
     var grid=$('.product-contents').isotope({
-      itemSelector:'.item'
+      itemSelector:'.item',
     })
 
     $('.btn').on('click',function(){
@@ -130,13 +147,15 @@ $(function(){
 
         $('.product-list .tab-contents > div').hide();
         $(id).show();
-        //필터링 초기화
+
         grid.isotope({
           filter:'*'
         })
         $('.btn').removeClass('active');
         $('.select-product-pc li:nth-child(1) a').addClass('active');
     })
+
+
 
     //탭메뉴-2depth
     $('.select-product-pc li a').click(function(e){
@@ -148,18 +167,10 @@ $(function(){
       $(this).addClass('active');
     })
 
-    //이벤트
-
-      // 
-      // $(window).resize(function(){
-      //
-      //   var width = window.innerWidth;
-      //
-      //   if(width < 1024){
-      //       $('.event .event-box').attr('src', 'img/event-img.jpg')
-      //     } else {$('.event .event-box').attr('img/event-mo.jpg');}
-      // }).resize();
-
+    //back to top이동
+    $('.sns>a').click(function(){
+      $('html').animate({scrollTop:0},600);
+    });
 
 
     //로그인 페이지
@@ -192,13 +203,33 @@ $(function(){
       $('input').val('');
     })
 
+    //모바일 footer
+    $('.mo-footer .m-footer a').click(function(e){
+      e.preventDefault();
+      $(this).find('i').toggleClass('fa-angle-down fa-angle-up');
+      $(this).next().stop().slideToggle();
+    })
 
+    //모바일 nav
+    $('.btn-menu-mo').click(function() {
+      $('nav').toggleClass('open');
+      $(this).find('i').toggleClass('fa-bars fa-times');
+    })
 
-
-
-
-
-
+    //모바일 네비게이션
+    // $('.').on({
+    //   click:function(){
+    //     $('nav').show();
+    //     $('nav').stop().animate({'left':'0'},1000);
+    //     $('.search').hide();
+    //   }
+    // });
+    // $('.').on({
+    //   click:function(){
+    //     $('nav').fadeOut();
+    //     $('nav').stop().animate({'left':'-100%'},1000);
+    //   }
+    // });
 
 
 

@@ -14,6 +14,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
   <link rel="stylesheet" href="css/discovery.css">
+  <link rel="stylesheet" href="css/discovery-mo.css">
+  <link rel="shortcut icon" href="img/discovery.ico" type="image/x-icon">
   <script src="js/discovery.js"></script>
 </head>
 <body>
@@ -21,6 +23,14 @@
     <h1 class="pc-logo">
       <a href="#"><img src="img/logo1.png" alt="DISCOVERY EXPEDITION"></a>
     </h1>
+
+    <!--PC 언어선택-->
+    <ul class="lang-nav">
+      <li><a href="#"></a>KR</li>
+      <li><a href="#"></a>EN</li>
+    </ul>
+
+    <button id="btn-search" class="icon icon-search"><span class="blind">검색창열기</span></button>
 
     <!-- 모바일 메뉴버튼-->
     <h1 class="mo-logo">
@@ -36,14 +46,6 @@
       <span class="blind">검색창열기</span>
     </button>
 
-
-    <!--PC 언어선택-->
-    <ul class="lang-nav">
-      <li><a href="#"></a>KR</li>
-      <li><a href="#"></a>EN</li>
-    </ul>
-
-    <button id="btn-search" class="icon icon-search"><span class="blind">검색창열기</span></button>
 
     <!-- 네비게이션-->
     <nav class="pc-nav">
@@ -125,9 +127,9 @@
       <ul class="user-nav">
         <li><a href="#">로그인/회원가입</a></li>
         <li><a href="#">장바구니<i class="icon icon-shopping"></i></a></li>
-      </ul>
+      </ul> -->
 
-      <ul class="gnb">
+      <!-- <ul class="gnb">
         <li>
           <a href="#">MEN<i class="icon icon-arrow"></i></a>
           <ul>
@@ -185,8 +187,8 @@
         <li><a href="#">STYLE</a></li>
         <li><a href="#">DISCOVERER</a></li>
         <li><a href="#">CS CENTER</a></li>
-      </ul>
-      <div class="lang-nav">
+      </ul>-->
+      <div class="lang-nav-mo">
         <span>언어선택</span>
         <input type="checkbox" id="on-off">
         <label for="on-off" class="on-off">
@@ -195,7 +197,7 @@
           <span class="btn"></span>
         </label>
       </div>
-    </nav> -->
+    </nav>
 
   </header>
 
@@ -239,6 +241,7 @@
         <span>오늘 다시 보지 않기</span></label>
       <button><i class='icon-white icon-wclose'></i><span class="blind">닫기</span></button>
     </div>
+
   </aside>
 
   <section class="main">
@@ -247,20 +250,20 @@
       <h2 class="blind">메인슬라이드</h2>
       <div class="swiper-container">
         <ul class="swiper-wrapper">
-          <li class="swiper-slide"><a href="#">
-            <img src="img/main1.jpg" alt="2019 WINTER NEW DOWN COLLECTION">
+          <li class="swiper-slide mo_main1"><a href="#">
+            <span>WHENEVER YOU WANT,<br> SWIMWEAR COLLECTION</span>
           </a></li>
-          <li class="swiper-slide"><a href="#">
-            <img src="img/main2.jpg" alt="2019 REFRESH WITH DISCOVERY BACKPACK">
+          <li class="swiper-slide mo_main2"><a href="#">
+            <span>THE BUCKET LIST<br> BUCKET DWALKER</span>
           </a></li>
-          <li class="swiper-slide"><a href="#">
-            <img src="img/main3.jpg" alt="LEISESTER 레스터 벤치파카 구매시 4만원 금액할인권 증정">
+          <li class="swiper-slide mo_main3"><a href="#">
+            <span>2019 REFRESH WITH<br> DISCOVERY BACKPACK</span>
           </a></li>
-          <li class="swiper-slide"><a href="#">
-            <img src="img/main4.jpg" alt="WHENEVER YOU WANT, SWIMWEAR COLLECTION">
+          <li class="swiper-slide mo_main4"><a href="#">
+            <span>2019 WINTER<br>NEW DOWN COLLECTION</span>
           </a></li>
-          <li class="swiper-slide"><a href="#">
-            <img src="img/main5.jpg" alt="BUKET D WALKER 워킹 기능이 탑재된 청키 어글리 슈즈 '버킷 디워커'">
+          <li class="swiper-slide mo_main5"><a href="#">
+            <span>LEISESTER 벤치파카<br>구매시 4만원 금액할인권 증정</span>
           </a></li>
         </ul>
         <div class="swiper-pagination"></div>
@@ -290,12 +293,12 @@
         <div class="select-product-mo">
           <div>
             <select>
-              <option>ALL</option>
-              <option>MEN</option>
-              <option>WOMEN</option>
-              <option>KIDS</option>
-              <option>SHOES</option>
-              <option>ACC</option>
+              <option class="btn" data-filter="*" >ALL</option>
+              <option class="btn" data-filter=".men" >MEN</option>
+              <option class="btn" data-filter=".women" >WOMEN</option>
+              <option class="btn" data-filter=".kids" >KIDS</option>
+              <option class="btn" data-filter=".shoes" >SHOES</option>
+              <option class="btn" data-filter=".acc" >ACC</option>
             </select>
           </div>
         </div>
@@ -306,7 +309,7 @@
         <div class="product-contents" id="tab1">
           <ul class="row">
 
-            <li class=" item shoes">
+            <li class="item shoes">
               <a class="" href="#">
                 <div class="wrap">
                   <img src="img/디워커.png" alt="버킷 디워커">
@@ -316,7 +319,7 @@
                       <span>NEW</span>
                     </div>
                     <dl>
-                      <dt>[[공용]버킷 디워커 (BUCKET DWALKER)</dt>
+                      <dt>[공용]버킷 디워커 (BUCKET DWALKER)</dt>
                       <dd>129,000</dd>
                     </dl>
                   </div>
@@ -594,10 +597,10 @@
     <article class="style-pick">
         <h2 class="blind">스타일픽</h2>
         <div class="row">
-            <div class="col-lg-7 style-img">
+            <div class="col-md-7 style-img">
               <img src="img/style.jpg" alt="스타일">
             </div>
-            <div class="col-lg-5">
+            <div class="col-md-5">
               <span>STYLE PICK</span>
               <h3>
                 Brighten Up Your<br>Winter
@@ -715,7 +718,10 @@
       <h2 class="blind">이벤트</h2>
       <div class="event-box">
         <a href="#">
-          <span>Sweet Holiday Gift</span>
+            <img src=img/event-pc.jpg class="event-pc">
+            <img src=img/event-mo.jpg class="event-mo">
+            <span>BRAND <br>NEW DAY</span>
+            <span>디스커버리 전 고객을 위 설연휴 5일간의 스페셜 오퍼</span>
         </a>
       </div>
     </article>
@@ -729,19 +735,19 @@
       <div class="wrap">
         <h2>Follow us on</h2>
         <ul>
-          <li class="sns-icon facebook-icon"><a href="https://ko-kr.facebook.com/discoverykr/"></a><span>페이스북</span></li>
-          <li class="sns-icon insta-icon"><a href="https://www.instagram.com/discoveryexpedition_kr/?hl=ko"></a><span>인스타그램</span></li>
-          <li class="sns-icon youtube-icon"><a href="https://www.youtube.com/channel/UCCnoKd4J4z6jMjSh9uUFAgw"></a><span>유투브</span></li>
+          <li class="sns-icon facebook-icon"><a href="https://ko-kr.facebook.com/discoverykr/"></a><span class="blind">페이스북</span></li>
+          <li class="sns-icon insta-icon"><a href="https://www.instagram.com/discoveryexpedition_kr/?hl=ko"></a><span class="blind">인스타그램</span></li>
+          <li class="sns-icon youtube-icon"><a href="https://www.youtube.com/channel/UCCnoKd4J4z6jMjSh9uUFAgw"></a><span class="blind">유투브</span></li>
         </ul>
       </div>
 
-      <!-- <div class="m-app">
+      <div class="m-app">
         <h2 class="blind">모바일 app설치</h2>
-        <a href="">
+        <a href="#">
           <span>디스커버리를 APP으로 만나세요</span>
           <span>DOWNLOAD</span>
         </a>
-      </div> -->
+      </div>
     </article>
 
 
@@ -749,7 +755,7 @@
   </section>
 
 
-  <!--푸터-->
+  <!--pc 푸터-->
   <footer class="pc-footer">
     <div class="top-footer">
       <hr>
@@ -786,7 +792,6 @@
           <button>
             <div class="icon icon-google"></div>
             <div>Google Play</div>
-
           </button>
           <button>
             <div class="icon icon-app"></div>
@@ -831,41 +836,33 @@
   <!--모바일 footer-------------------------------------------->
   <footer class="mo-footer">
       <ul class="m-footer">
-        <li><a href="#">브랜드스토리
-          <div class="m-toggle"><img src="img/down-arrow.png" alt="아래화살표"></div>
+        <li>
+          <a href="#">브랜드스토리
+            <i class="fas fa-angle-down"><span class="blind">오른쪽화살표</span></i></a>
           <ul>
             <li>ABOUT DISCOVERY</li>
             <li>I AM A DISCOVERER</li>
           </ul>
-        </a></li>
-        <li><a href="#">사이트정보제공
-          <div class="m-toggle"><img src="img/down-arrow.png" alt="오른쪽화살표"></div>
+        </li>
+        <li>
+          <a href="#">사이트정보제공
+            <i class="fas fa-angle-down"><span class="blind">오른쪽화살표</span></i></a>
           <ul>
             <li>개인정보처리방침</li>
             <li>이용약관</li>
             <li>이메일 무단 수집 거부</li>
             <li>KCP 안전구매서비스 기업</li>
           </ul>
-        </a></li>
-        <li><a href="#">공지사항
-          <i class="icon icon-arrow"><span class="blind">오른쪽화살표</span></i>
-        </a></li>
-        <li><a href="#">매장안내
-          <div><img src="img/right-arrow.png" alt="오른쪽화살표"></div>
-        </a></li>
-        <li><a href="#">단체구매/제휴/대리점 개설문의
-          <div><img src="img/right-arrow.png" alt="오른쪽화살표"></div>
-        </a></li>
-        <li><a href="#">고객센터
-          <div><img src="img/right-arrow.png" alt="오른쪽화살표"></div>
-        </a></li>
-        <li><a href="#">1:1 고객상담
-          <div><img src="img/right-arrow.png" alt="오른쪽화살표"></div>
-        </a></li>
+        </li>
+        <li><a href="#">공지사항</a></li>
+        <li><a href="#">매장안내</a></li>
+        <li><a href="#" class="small-text">단체구매/제휴/대리점 개설문의</a></li>
+        <li><a href="#">고객센터</a></li>
+        <li><a href="#">1:1 고객상담</a></li>
       </ul>
       <address>
         <p>서울특별시 강남구 언주로 541 에프앤에프빌딩 호 (주) 에프앤에프 / 대표 : 김창수</p>
-        <strong>사업자등록번호 : 214-86-09977 /<br> 통신판매업 신고번호 : 제2011-서울강남-00086[사업자정보확인]</strong>
+        <p>사업자등록번호 : 214-86-09977 /<br> 통신판매업 신고번호 : 제2011-서울강남-00086<br> [사업자정보확인]<p>
         <p>A/S : 02 - 3474 - 8914</p>
         <p>E - MAIL : discovery@fnf.co.kr</p>
         <p>FAX : 02 - 520 - 0991</p>
